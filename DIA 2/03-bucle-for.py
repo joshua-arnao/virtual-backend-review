@@ -20,4 +20,25 @@ for nota in notes[:3]:
 for posicion in range(3):
     print(notes[posicion])
 
+approveds = ['Joshua', 'Maria', 'Simon', 'Fatima']
 
+for approved in approveds:
+    if (approved == 'Joshua'):
+        print('Joshua esta aprobado')
+        break
+else:
+    print('No se encontro el alumno a buscar')
+
+print('Termino de ejecutarse el for')
+
+
+
+products = ['manzanas','peras','Tallarines','Tazas']
+search = input('Ingresa el producto a buscar:')
+
+for product in products:
+    if product == search:
+        print('El producto si esta en la tienda')
+        break
+else:
+    print('No se econtro el producto')
