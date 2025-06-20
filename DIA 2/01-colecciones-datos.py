@@ -42,6 +42,7 @@ print(section_a * 2)
 
 # Tuplas
 # Es similar a la lista pero no se puede modificar lista: [], tupla:()
+# mas de 2 valores separados por un "," se combierte en tupla
 course = ('backend', 'frontend')
 print(course)
 print(course[0])
