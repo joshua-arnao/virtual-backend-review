@@ -1,0 +1,5 @@
+python3 -m venv <name_entorno>
+
+pip3 freeze : llama todas las librerias del proyecto
+
+pip3 install -r requirementes.txt : lee un archivo para installar
