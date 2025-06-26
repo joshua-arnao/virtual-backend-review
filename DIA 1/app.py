@@ -3,7 +3,14 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-clients = []
+clients = [
+    {
+        "name": "Joshua",
+        "country": "Peru",
+        "age": 28,
+        'id': 1
+    }
+]
 
 
 @app.route('/')
@@ -15,18 +22,32 @@ def state():
     }
 
 
-@app.route('/clients', methods=['POST'])
+@app.route('/clients', methods=['POST', 'GET'])
 def get_clients():
-    # request: Es llamado en cada controlador
     print(request.method)
     print(request.get_json())
 
-    data = request.get_json()
-    clients.append(data)
+    if request.method == 'POST':
+        data = request.get_json()
+        data['id'] = len(clients) + 1
+        clients.append(data)
 
+        return {
+            'message': 'Cliente agregado exitosamente',
+            'clients': data
+        }
+    elif request.method == 'GET':
+        return {
+            'message': ' La lista de clientes',
+            'clients': clients
+        }
+
+
+@app.route('/client/<int:id>', methods=['GET'])
+def get_id_client(id):
+    print(id)
     return {
-        'message': 'Cliente agregado exitosamente',
-        'clients': data
+        'id': id
     }
 
 
