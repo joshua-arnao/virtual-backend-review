@@ -3,3 +3,10 @@ python3 -m venv <name_entorno>
 pip3 freeze : llama todas las librerias del proyecto
 
 pip3 install -r requirementes.txt : lee un archivo para installar
+
+CORS cross origin resource sharing -> intercambio de recursos de origen cruzado
+
+Validación:
+ALLOWED-METHOD: Metodos permitidos
+ALLOWED_ORIGIN: que páginas pueden visualziar(white list)
+ALLOWED_HEADERS: Cabeceras permititas
